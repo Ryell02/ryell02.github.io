@@ -1,10 +1,11 @@
 const firebaseConfig = {
- 			    apiKey: "AIzaSyAgh-l5g4RbNDIoWgu5K_o0wKhSI74R6eU",
-  				authDomain: "crud-531e4.firebaseapp.com",
-  				projectId: "crud-531e4",
- 				storageBucket: "crud-531e4.appspot.com",
-  				messagingSenderId: "500631622860",
-  				appId: "1:500631622860:web:38edf5910d696675f55e69"
+  				apiKey: "AIzaSyB_Sl22LS1HMIrfgypJ-3_fh8l8j-2KsMY",
+  				authDomain: "crud-2210e.firebaseapp.com",
+  				projectId: "crud-2210e",
+  				storageBucket: "crud-2210e.appspot.com",
+  				messagingSenderId: "999406891164",
+  				appId: "1:999406891164:web:92affb1333ac1256907d59"
+
 		};
 
 	firebase.initializeApp(firebaseConfig);
