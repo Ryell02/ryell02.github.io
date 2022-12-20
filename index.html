@@ -7,51 +7,51 @@
 </head>
 <body>
 	<center>Advance Database CRUD</center>
-	<form action="add.php" method="post" name="form1">
+	<form id="myForm" onsubmit="saveData()">
 		<table width="25%" border="0">
 			<tr> 
 				<td>Personal ID: </td>
-				<td><input type="text" name="personal_ID" placeholder="Input Personal ID " required></td>
+				<td><input type="text" id="personal_ID" placeholder="Input Personal ID " required></td>
 			</tr>
 			<tr> 
 				<td>Name: </td>
-				<td><input type="text" name="fullname" placeholder="Input Fullname" required></td>
+				<td><input type="text" id="fullname" placeholder="Input Fullname" required></td>
 			</tr>
 			<tr> 
 				<td>Birthday: </td>
-				<td><input type="date" name="birthday" placeholder="Input Birthday" required></td>
+				<td><input type="date" id="birthday" placeholder="Input Birthday" required></td>
 			</tr>
 			<tr> 
-				<td>Phone: </td>
-				<td><input type="text" name="phone" placeholder="Input Phone" required></td>
+				<td>Age: </td>
+				<td><input type="text" id="age" placeholder="Input Phone" required></td>
 			</tr>
 			<tr> 
 				<td>Address: </td>
-				<td><input type="text" name="city_address" placeholder="Input Address" required></td>
+				<td><input type="text" id="city_address" placeholder="Input Address" required></td>
 			</tr>
 			<tr> 
 				<td>Postal Code: </td>
-				<td><input type="text" name="postal_code" placeholder="Input Postal Code" required></td>
+				<td><input type="text" id="postal_code" placeholder="Input Postal Code" required></td>
 			</tr>
 			<tr> 
 				<td>Department: </td>
-				<td><input type="text" name="department" placeholder="Input Department" required></td>
+				<td><input type="text" id="department" placeholder="Input Department" required></td>
 			</tr>
 			<tr> 
 				<td>Position: </td>
-				<td><input type="text" name="position" placeholder="Input Position" required></td>
+				<td><input type="text" id="position" placeholder="Input Position" required></td>
 			</tr>
 			<tr> 
 				<td>Gender: </td>
-				<td><input type="text" name="gender" placeholder="Input Gender" required></td>
+				<td><input type="text" id="gender" placeholder="Input Gender" required></td>
 			</tr>
 			<tr> 
 				<td>Marital Status: </td>
-				<td><input type="text" name="marital_status" placeholder="Input Marital Status" required></td>
+				<td><input type="text" id="marital_status" placeholder="Input Marital Status" required></td>
 			</tr>
 			<tr> 
 				<td>Company ID: </td>
-				<td><input type="text" name="company_ID" placeholder="Input Company ID" required></td>
+				<td><input type="text" id="company_ID" placeholder="Input Company ID" required></td>
 			</tr>
 			<tr> 
 
@@ -66,55 +66,28 @@
 		</form>
 
 </body>
+<script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.15.0/firebase-app.js"></script>
 <script src="config.js"></script>
 
 <script> 
-		function saveData(){
+			function saveData(){
 
-			var personal_ID = document.getElementById("personal_ID").value
-			var Name = document.getElementById("email").value
-			var birthday = document.getElementById("birthday").value
-			var phone = document.getElementById("phone").value
-			var address = document.getElementById("address").value
-			var postal_code = document.getElementById("postal_code").value
-			var department = document.getElementById("department").value
-			var position = document.getElementById("position").value
-			var gender = document.getElementById("gender").value
-			var marital_status = document.getElementById("marital_status").value
-			var company_ID = document.getElementById("company_ID").value
-			
+			var name = document.getElementById("name").value;
+			var age = document.getElementById("age").value;
+	
 
 			db.collection("users").add({
-				userPersonal_ID: name,
 				userName: name,
-				userBirthday: birthday,
-				userPhone: phone,
-				userAddress: address,
-				userPostal_Code:postal_code
+				userAge: age
 			}).then(() => {
 
 				alert("data saved");
+
 			})
 
-
 		}
-			
-		</script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-</html>
+</script>
 
 </html>
